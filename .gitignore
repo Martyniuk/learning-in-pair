@@ -1,3 +1,4 @@
 # editor config
 .vscode
 .idea
+.DS_Store

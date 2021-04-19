@@ -1,12 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FE Masters Bootcamp - Artem</title>
 </head>
+
 <body>
-    <h1>FE Masters Bootcamp - hui</h1>
+    <div class="wrapper">
+        <section>
+            <h1>Alien Abduction Order Form</h1>
+            <p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+            <form action="">
+
+                <fieldset>
+                    <legend>Your contact information</legend>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+380 ...">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </fieldset>
+
+                <h2>About your abduction </h2>
+                <label for="date">Requested date</label>
+                <input type="date" id="date" name="date">
+                <label for="qty">How many people would you like abducted?</label>
+                <input type="number" id="qty" name="qty" min="1" max="10">
+
+                <fieldset>
+                    <legend>What type of UFO do you prefer?</legend>
+                    <label>
+                        <input type="radio" name="ufotype" value="classic"> Classic oval UFO
+                    </label>
+                    <label>
+                        <input type="radio" name="ufotype" value="starwars">Star Wars-style Imperial cruiser
+                    </label>
+                    <label>
+                        <input type="radio" name="ufotype" value="galactica">Battlestar Galactica-style Viper
+                    </label>
+                    <label>
+                        <input type="radio" name="ufotype" value="borg">Borg-style cube
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What type of abduction experience do you want?</legend>
+                    <ul>
+                        <label for="tour">Tour of the solar system</label>
+                        <input type="text" id="tour" name="tour">
+                        <label for="dinner">Alien dinner and discussion</label>
+                        <input type="text" id="dinner" name="dinner">
+                        <label for="dance">Alien dance lessons</label>
+                        <input type="text" id="dance" name="dance">
+                        <label for="watching">Whale watching</label>
+                        <input type="text" id="watching" name="watching">
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>What type of abduction experience do you want?</legend>
+                    <label for="abtype">Select a type :</label>
+                    <select id="abtype" name="abtype">
+                        <option selected>Choose one</option>
+                        <option value="tour">Tour of the solar system</option>
+                        <option value="dinner">Alien dinner and discussion</option>
+                        <option value="dance">Alien dance lessons</option>
+                        <option value="watching">Whale watching</option>
+                    </select>
+                </fieldset>
+
+                <label for="comments">Special requests:</label>
+                <textarea id="comments" name="comments" cols="30" rows="10"></textarea>
+
+                <label>
+                    <input type="checkbox" id="subscribe" name="subscribe" value="subscribe" checked> Add me to mailing
+                    list
+                </label>
+
+            </form>
+        </section>
+        <aside>
+            <h3>Our Location</h3>
+            <address>
+                Frontend Masters &middot;
+                60 South 6th Street &middot;
+                Suite 3625 &middot;
+                Minneapolis, MN 55402
+            </address>
+        </aside>
+    </div>
 </body>
+
 </html>
