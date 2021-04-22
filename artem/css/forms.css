@@ -1,0 +1,51 @@
+html {
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(../img/galaxy.jpg);
+}
+
+.wrapper {
+      width: 80%;
+      margin: 0 auto;
+      padding: 1em;
+      display: flex;
+      flex-flow: row nowrap;
+      background-color: #6BAFDF;
+}
+
+p {
+      margin-bottom: 0;
+      margin-top: 2rem;
+}
+
+section {
+      flex-basis: 57%;
+      margin-right: 10%;
+}
+
+aside {
+      flex-basis: 33%;
+}
+p {
+    margin: 2rem 0 0 0;
+}
+ 
+fieldset {
+    border: 2px solid green;
+    border-radius: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
