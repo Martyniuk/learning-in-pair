@@ -1,0 +1,22 @@
+{
+  "name": "learningpath",
+  "version": "1.0.0",
+  "description": "The point is to create Project where 2 people gonna be studying same program and pushing each other to do progress coz of competitive environment!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martyniuk/learning-in-pair.git"
+  },
+  "keywords": [
+    "lerning"
+  ],
+  "author": "Volodymyr Martyniuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Martyniuk/learning-in-pair/issues"
+  },
+  "homepage": "https://github.com/Martyniuk/learning-in-pair#readme"
+}
