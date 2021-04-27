@@ -1,12 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interneting is Hard - Volo</title>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Interneting is hard</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .block {
+            background-color: #efefef;
+        }
+        .inline {
+            background-color: aquamarine;
+            margin-top: 30px;
+        }
+        .button {
+            color: #FFF;
+            background-color: #5995DA;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #5D6063;
+            border-radius: 5px;
+            padding: 20px;
+            transition: box-shadow ease .5s;
+            width: 200px;
+            white-space: nowrap;
+            overflow: scroll;
+            box-sizing: border-box;  /* default is content-box */
+        }
+        .button:hover {
+            cursor: pointer;
+            box-shadow: 2px 2px 11px #000;
+            transition: box-shadow ease .5s;
+        }
+    </style>
 </head>
 <body>
     <h1>Interneting is Hard course</h1>
+    <section>
+        <h2>HTML - meaning & CSS - styling</h2>
+        <p>HTML should not be used for styling - like multiple br tags</p>
+        <p>if you use em & strong - it is needed By structure of a document</p>
+    </section>
+    <hr/>
+    <section>
+        <h2>4th Chapter - intro to CSS</h2>
+        <ul>
+            <li>Setup, adding link tag
+                <ul> some very important attrs in link tag that may be in handy
+                    <li>preconnect - experimental API - open connection to site in advance</li>
+                    <li>prefetch - ok - suggest browser to fetch resource in advance</li>
+                    <li>preload - ok - tells browser to download a resource</li>
+                    <li>prerender - experimental API - <b>suggest browser to fetch resource in advance</b> & <b>render prefetched content offscreen so it can be quickly presented to the user once needed</b></li>
+                    <li>dns-prefetch - experimental API - hint to browser resource is needed, DNS lookup & protocol handshaking before click</li>
+                    <li>stylesheet - ok - external resource to be used as a stylesheet</li>
+                </ul>
+            </li>
+            <li>customizing bullets with <em>list-style-image</em></li>
+            <li>The Cascading
+                <ul>CSS hierarchy
+                    <li>The Browser's default stylesheet</li>
+                    <li>User-defined stylesheets</li>
+                    <li>External stylesheets(that's us) - applied via link tag</li>
+                    <li>Page-specific styles(that's also us) - style tag</li>
+                    <li>Inline styles (that could be us, but is never should be)</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>5th Chapter - Box Model</h2>
+        <ul>
+            <li class="list-item">
+                <p class="block">
+                     <em>Just a Note</em> - inline elements have padding, border, margin
+                    <span class="inline">inline</span>
+                    <b>But</b> maring-top & margin-bottom can't be applied.
+                </p>
+            </li>
+            <li>Box Model gives 4 properties:
+                <ol>
+                    <li>Content - text, img other media content...</li>
+                    <li>Padding - space between content and border</li>
+                    <li>Border - line between padding and margin</li>
+                    <li>Margin - space between box and surrounding boxes</li>
+                </ol>
+            </li>
+            <li>How to determine which one is "right" choice:
+                <ol>
+                    <li>The padding of a box has a background, while margins are always transparent</li>
+                    <li>Padding is included in the click area of an element, while margins aren’t.</li>
+                    <li>Margins collapse vertically, while padding doesn’t</li>
+                </ol>
+                <br>
+                <em>If none of these help you decide whether to use padding over margin, then don’t fret about it—just pick one.In CSS, there’s often more than one way to solve your problem.</em>
+            </li>
+            <li>Preventing Margin collapse:
+                <p><b>Issue:</b> When you have two boxes with vertical margins sitting right next to each other, they will collapse. Instead of adding the margins together like you might expect, only the biggest one is displayed</p>
+                <p><b>Solutions:</b></p>
+                    <ul>
+                        <li>
+                            <p>All you need to do is put another invisible element in between them:</p>
+                            <img src="./img/marginCollapsing.png" alt="">
+                        </li>
+                        <li>
+                            Use Padding for spacing if it suits particular use case.
+                        </li>
+                        <li>
+                            Stick to a bottom-only or top-only margin convention
+                        </li>
+                        <li>
+                            Flexbox layout scheme doesn't have collapsing margins.
+                        </li>
+                    </ul>
+            </li>
+            <li>
+                Centring block level elements:
+                <ul>
+                    <li>Auto-margins</li>
+                    <li>floats</li>
+                    <li>flex</li>
+                    <li>grid</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="button">Button Button Button Button</div>
+    </section>
+    <section>
+        <h2>6th Chapter - CSS selectors</h2>
+        <ul>
+            <li></li>
+        </ul>
+    </section>
 </body>
 </html>
