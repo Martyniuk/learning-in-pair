@@ -1,0 +1,25 @@
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.parallax {
+    height: 500px;
+}
+.first{
+    background: url('../img/space_1.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.second{
+    background: url('../img/space_2.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.third{
+    background: url('../img/space_3.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
