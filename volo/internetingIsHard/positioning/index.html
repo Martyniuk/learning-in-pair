@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <section>
+        <h2>Conclusion</h2>
+        <ul>
+            <li>Static - normal flow positioning
+                <ul>Next properties have no effect:
+                    <li>top</li>
+                    <li>right</li>
+                    <li>bottom</li>
+                    <li>left</li>
+                    <li>z-index</li>
+                </ul>
+            </li>
+            <li>
+                Relative - normal flow positioning. (The containing block is formed by the edge of the content box of the nearest ancestor element)
+                <br />
+                Can apply top, right, bottom, left props
+                <br />
+                <strong>Creates new stacking context when <em>z-index</em> in not <em>auto</em></strong>
+            </li>
+            <li>
+                Absolute - removed from the normal document flow (The containing block is formed by the edge of the padding box of the nearest ancestor element that has a position value other than static(fixed, absolute, relative, sticky))
+                <br />
+                Can apply top, right, bottom, left props
+                <br />
+                <strong>Creates new stacking context when <em>z-index</em> in not <em>auto</em></strong>
+            </li>
+            <li>
+                Fixed - removed from the normal document flow. Positioned relative to the initial containing block (or element that has non default values for next properties - filter, perspective / transform, will-change, contain: paint)
+                <br />
+                Can apply top, right, bottom, left props
+                <br />
+                <em>Above rules apply for Absolute positioning too.</em>
+            </li>
+            <li>
+                Sticky - normal flow positioning. "Sticks" to its nearest ancestor that has a "scrolling mechanism"
+                <br />
+                Can apply top, right, bottom, left props
+                <br />
+                <strong>Always creates new stacking context!</strong>
+            </li>
+        </ul>
+    </section>
+    <div class='container'>
+        <div class='example relative'>
+          <div class='item'><img src='img/static.svg' /></div>
+          <div class='item item-relative'><img src='img/relative.svg' /></div>
+          <div class='item'><img src='img/static.svg' /></div>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='example absolute'>
+          <div class='item'><img src='img/static.svg' /></div>
+          <div class='item item-absolute'><img src='img/absolute.svg' /></div>
+          <div class='item'><img src='img/static.svg' /></div>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='example fixed'>
+          <div class='item'><img src='img/static.svg' /></div>
+          <div class='item item-fixed'><img src='img/fixed.svg' /></div>
+          <div class='item'><img src='img/static.svg' /></div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class='logo'>
+            <img src='img/awesome-logo.svg'/>
+        </div>
+        <ul class='menu'>
+            <li class='dropdown'>
+                <span>Features ▾</span>
+                <ul class="features-menu">
+                    <li class="features-menu-item">
+                        <a href="#">Harder</a>
+                    </li>
+                    <li class="features-menu-item">
+                        <a href="#">Faster</a>
+                    </li>
+                    <li class="features-menu-item">
+                        <a href="#">Better</a>
+                    </li>
+                    <li class="features-menu-item">
+                        <a href="#">Stronger</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href='#'>Blog</a></li>
+            <li><a href='#'>Subscribe</a></li>
+            <li><a href='#'>About</a></li>
+        </ul>
+    </div>
+</body>
+</html>
