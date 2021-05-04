@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive design</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class='page'>
+        <div class='section menu'></div>
+        <div class='section header'>
+          <div class="photo">
+              <picture>
+                  <source media='(min-width: 401px)' srcset="img/photo-big.jpg" />
+                  <source media='(max-width: 400px)' srcset="img/photo-tall.jpg" />
+                  <img src="img/photo-small.jpg" alt="photo">
+              </picture>
+          </div>
+        </div>
+        <div class='section content'>
+            <div class="illustration">
+                <img src='img/illustration-small.png' srcset='img/illustration-small.png 1x, img/illustration-big.png 2x' style="max-width: 500px" />
+            </div>
+        </div>
+        <div class='section sign-up'>
+          <img src='img/sign-up.svg'/>
+        </div>
+        <div class='section feature-1'>
+          <img src='img/feature.svg'/>
+        </div>
+        <div class='section feature-2'>
+          <img src='img/feature.svg'/>
+        </div>
+        <div class='section feature-3'>
+          <img src='img/feature.svg'/>
+        </div>
+    </div>
+</body>
+</html>
