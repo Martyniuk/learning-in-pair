@@ -1,0 +1,105 @@
+
+* {
+    box-sizing: border-box;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+.block {
+    background-color: #efefef;
+}
+.inline {
+    background-color: aquamarine;
+    margin-top: 30px;
+}
+.button {
+    color: #FFF;
+    background-color: #5995DA;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+    padding: 20px;
+    transition: box-shadow ease .5s;
+    width: 200px;
+    white-space: nowrap;
+    overflow: scroll;
+    box-sizing: border-box;  /* default is content-box */
+}
+.button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 11px #000;
+    transition: box-shadow ease .5s;
+}
+/* 7th Chapter - Floats */
+.floatsContainer {
+    overflow: hidden;
+    background-color: #cecece;
+}
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+.menu {
+    height: 100px;
+    background-color: #b2d6ff;
+}
+.sidebar {
+    height: 300px;
+    width: 200px;
+    float: left;
+    background-color: #F09a9d;
+}
+.content {
+    padding: 20px;
+    height: 500px;
+    width: 650px;
+    background-color: #f5cf8e;
+    float:left;
+}
+.article-image {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #d6e9fe;
+    overflow: hidden;
+}
+
+.footer-item {
+    float: left;
+    width: 31%;
+    margin: 20px 1.15%;
+    height: 160px;
+    background-color: #B2D6FF;
+    /* text-align: center; */
+}
+
+.avatar {
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 25px;
+    border-radius: 40px;
+    background-color: #D6E9FE;
+    border: 1px solid red;
+}
+
+.username {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+
+}
+
+.comment {
+    padding: 0;
+    margin: 10px;
+    /* overflow: hidden; */
+}
