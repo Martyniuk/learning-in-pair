@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Submission</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <header class="speaker-form-header">
+        <h1>Speaker Submission</h1>
+        <p>
+            <em>Want to speak at our fake conference? Fill out this form.</em>
+        </p>
+    </header>
+    <!-- leaving action blank - we are telling to submit to the same url -->
+    <form action="" method="post" class="speaker-form">
+        <div class="form-row">
+            <label for="full-name">Name</label>
+            <input id="full-name" name="full-name" type="text" />
+        </div>
+        <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="john@doe.com" />
+        </div>
+        <fieldset class="legacy-form-row">
+            <legend>Type of Talk</legend>
+
+            <input
+                id="talk-type-1"
+                name="talk-type"
+                value="main-stage"
+                type="radio"
+            />
+            <label for="talk-type-1" class="radio-label">Main stage</label>
+
+            <input
+                id="talk-type-2"
+                name="talk-type"
+                value="workshop"
+                type="radio"
+                checked
+            />
+            <label for="talk-type-2" class="radio-label">Workshop</label>
+        </fieldset>
+
+        <div class='form-row'>
+            <label for='t-shirt'>T-Shirt Size</label>
+            <select id='t-shirt' name='t-shirt'>
+              <option value='xs'>Extra Small</option>
+              <option value='s'>Small</option>
+              <option value='m'>Medium</option>
+              <option value='l'>Large</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="abstract">Abstract</label>
+            <textarea name="abstract" id="abstract"></textarea>
+            <div class="instructions">
+                <p>Describe your talk in 500 words or less</p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label class="checkbox-label" for="available">
+                <input
+                id="available"
+                name="available"
+                value="is-available"
+                type="checkbox"
+                />
+                <span>I'm actually available the date of the talk</span>
+            </label>
+        </div>
+
+        <div class='form-row'>
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <section class="conclusion">
+        <h2 class="conclusion-title">Conclusion. What rules I should remember:</h2>
+        <ol class="conclusion-list">
+            <li>
+                <div class="list-item">
+                    <p>Label and Input relationship:</p>
+                    <hr>
+                    <p>👉 Input <strong>id</strong> attr should be same as <strong>label</strong>`s for attr 👇</p>
+                    <br>
+                    <img src="img/form_label.png" alt="Info about how label for and input id relates">
+                </div>
+            </li>
+            <li>
+                <div class="list-item">
+                    <p>Every radio button group you create should:</p>
+                    <ul>
+                        <li>
+                            Be wrapped in a <code>&lt;fieldset&gt;</code>, which is labeled with a <code>&lt;legend&gt;</code>.
+                        </li>
+                        <li>
+                            Associate a <code>&lt;label&gt;</code> element with each radio button.
+                        </li>
+                        <li>
+                            Use the same name attribute for each radio button in the group.
+                        </li>
+                        <li>
+                            Use different value attributes for each radio button.
+                        </li>
+                    </ul>
+                    <hr>
+                    <p>👉 nice visual example of how radio buttons to code 👇</p>
+                    <br>
+                    <img src="img/form_radio.png" alt="Info about how input type radio to code">
+                </div>
+            </li>
+        </ol>
+    </section>
+</body>
+</html>
