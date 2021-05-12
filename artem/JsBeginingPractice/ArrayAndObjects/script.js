@@ -6,14 +6,19 @@ function addTwoToEveryNumberInTheList (list) {
   for (let i = 0; i < list.length; i++) {
     newList.push(list[i] + 2);
   }
-  
   return newList;
 } 
 
 function findLargestNumber(list) {
   // return the largest number in array
-  
-  return Math.max.apply(null, list);
+  /*
+  let max = primeNumbers.reduce(function(a, b) {
+    return Math.max(a, b);
+  })
+  return max;
+  */  
+  let maxNumber = Math.max(...list);
+  return maxNumber;
 }
 
 function makeDogObject() {
@@ -23,9 +28,9 @@ function makeDogObject() {
       color: "white",
       age: 6,
       speak() {
-      return "woof";
+        return "woof";
+      }
     }
-  }
   // return a dog object that
   //   has a speak method that returns woof
   //   has a name property of "Fido"
@@ -49,17 +54,17 @@ function getListOfNames(list) {
     console.log(listOfNames.push(person.name));
   });*/
   
-  let listOfNames = [];
+  /*
   
-  list.map(function(person) {
-    return listOfNames.push(person.name);
+  */
+  let justNames = list.map(person => (person.name));
   });
   
   // list is an array of objects that looks like this
   // { name: "Some Person", jobTitle: "Boss Person", age: 30 }
   // return a list of all the workers' names
 
-  return listOfNames;
+  return justNames;
 }
 
 function getAverageAge(list) {
@@ -79,7 +84,7 @@ function getAllEngineers(list) {
   // using the same list as above, return a list of all people who have the word "Engineer" in their jobTitle
   let engineerNames = [];
   
-  for (let i = 0; i < list.length; i++)  {
+  for (let i = 0; i < list.length; i++) {
     if (list[i].jobTitle.includes("Engineer")) {
       engineerNames.push(list[i].name);
     }
