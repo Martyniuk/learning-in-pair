@@ -19,10 +19,10 @@ function findLargestNumber(list) {
 function makeDogObject() {
   
     const dog = {
-    name: "Fido",
-    color: "white",
-    age: 6,
-    speak() {
+      name: "Fido",
+      color: "white",
+      age: 6,
+      speak() {
       return "woof";
     }
   }
