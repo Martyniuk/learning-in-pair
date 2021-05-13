@@ -58,7 +58,7 @@ function getListOfNames(list) {
   
   */
   let justNames = list.map(person => (person.name));
-  });
+  
   
   // list is an array of objects that looks like this
   // { name: "Some Person", jobTitle: "Boss Person", age: 30 }
