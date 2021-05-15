@@ -9,6 +9,7 @@ body {
   margin: 0;
 }
 .wrapper {
+    margin: 0 auto;
     width: 400px;
     background-color: black;
     color: white;
