@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav {
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    z-index: 5;
+    position: relative;
+}
+
+.gallery-img {
+    display: none;
+    max-height: 600px;
+}
+
+.active {
+    display: block;
+}
+
+.image-gallary {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: peru;
+    color: white;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prev {
+    margin-right: 15px;
+}
+
+.btn:disabled {
+    background-color: aquamarine;
+    cursor: not-allowed;
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+img {
+    height: 600px;
+}
+
+.brand {
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: 50px;
+    cursor: grab;
+}
