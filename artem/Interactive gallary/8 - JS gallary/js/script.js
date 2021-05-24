@@ -2,8 +2,6 @@ const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const gallaryImgs = document.querySelectorAll('.gallery-img');
 
-console.log(gallaryImgs);
-
 let currentlySelected = 0;
 
 prevButton.addEventListener('click', function () {
