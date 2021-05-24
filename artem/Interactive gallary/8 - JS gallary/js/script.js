@@ -8,10 +8,10 @@ prevButton.addEventListener('click', function () {
     gallaryImgs[currentlySelected].classList.remove('active');
     currentlySelected--; // currentlySelected = currentlySelected -1;
     gallaryImgs[currentlySelected].classList.add('active');
-    nextButton.disabled = false;
+    nextButton.removeAttribute('disabled');
 
     if (currentlySelected === 0) {
-        prevButton.disabled = true;
+        prevButton.setAttribute('disabled', 'disabled');
     }
 });
 
@@ -19,9 +19,9 @@ nextButton.addEventListener('click', function () {
     gallaryImgs[currentlySelected].classList.remove('active');
     currentlySelected++;
     gallaryImgs[currentlySelected].classList.add('active');
-    prevButton.disabled = false;
+    prevButton.removeAttribute('disabled');
 
     if (gallaryImgs.length === currentlySelected + 1) {
-        nextButton.disabled = true;
+        nextButton.setAttribute('disabled', 'disabled');
     }
 }); 
