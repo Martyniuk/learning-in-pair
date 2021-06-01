@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KCD Course</title>
+  </head>
+  <body>
+    <section>
+      <h2>Epic React Course</h2>
+      <ol>
+        <li>
+          Fundamentals
+          <ul>
+            <li>add content about 1st course</li>
+          </ul>
+        </li>
+        <li>
+          Hooks
+          <ul>
+            <li>
+              useState hook:
+              <ul>
+                important to remember:
+                <li>initValue - <code>useState(0)</code></li>
+                <li>
+                  initValue - <code>useState(() => 0)</code>
+                  <p>callback means Lazy initialization</p>
+                  <p>
+                    in case initValue is computed by expensive operation - use
+                    callback
+                  </p>
+                  <ul>
+                    examples of potential cases
+                    <li>
+                      getting init value from localStorage, cookie, indexDB
+                    </li>
+                    <li>iterations over Array with > O(N) complexity</li>
+                  </ul>
+                </li>
+                <li>update state - <code>setCount(count)</code></li>
+                <li>
+                  update state -
+                  <code>setCount(prevCount => prevCount + 1)</code>
+                </li>
+                <li>
+                  update state -
+                  <code>setUser({ name, email })</code>
+                  <p>
+                    you can use object as state to manage few fields and dont
+                    have multiple useStates, but setUser works not as
+                    this.setState!!! it's not merging state, it Overwrites it!
+                    so use callback in setUser
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              useEffect hook
+              <ul>
+                important to remember:
+                <li>
+                  Behaives as didMount, didUpdate, Unmount lifecycles in class
+                  component
+                  <p>didMount - fires on initial render of a FC</p>
+                  <p>didUpdate -
+                      <ul>
+                          <li>if you pass NO second argument - it fires</li>
+                          <li>if you pass EMPTY ARRAY as second argument - [] - if fires only ONCE</li>
+                          <li>if you pass ARRAY of dependencies as second argument - [] - if fires only if some of this dependencies changes</li>
+                      </ul>
+                  </p>
+                  <p>Unmount - cleaning up phase - you may return Callback that will fire only before Component leaves the screen.</p>
+                </li>
+                <li>
+                    Function passed to useEffect fires <strong>AFTER</strong> layout and paint, during deferred event.
+                </li>
+                <li>
+                    fetching data in useEffect refer to <a href="https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies">REACT DOC</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              custom hooks
+              <ul>
+                important to remember
+                <li>
+                  every custom hook should have name to start from "use", it is
+                  needed for eslint rules to check violation, if function
+                  contains hooks inside
+                </li>
+              </ul>
+            </li>
+            <li>
+                useLayoutEffect hook
+                <p>the same one as useEffect, the diff is in When it fires</p>
+                <p>if fires before the browser has a chance to paint</p>
+                <p>NOTE! prefer standard useEffect when possible</p>
+            </li>
+            <li>useReducer hook</li>
+            <li>useCallback hook - return memoized callback</li>
+            <li>useMemo hook - return memoized value</li>
+            <li>useRef hook - return mutable ref object, where .current is initialized to the passed argument</li>
+            <li>useImperativeHandle hook - ?</li>
+            <li>useDebugValue hook - can be used to display label for custom hooks</li>
+
+            <li>Lifting state - colocating state - what does it mean? - your state should be as close as possible to place where it is used</li>
+            <li>
+                tic-tac-toe game made in React (refer README file for serving production build of a project)
+            </li>
+            <li>
+                <p>useRef usage with Tilt</p>
+                <p>practice refactoring Class component into Function component</p>
+            </li>
+            <li>fetching pokemons data
+                <ul>
+                    <li>fetch data in useEffect</li>
+                    <li>having error state</li>
+                    <li>having status - 'idle', 'pending', 'rejected', 'resolved'</li>
+                    <li>adding ErrorBoundary - a component that catches error and renders FallbackComponent for better UX.<br>
+                        <ul>NOTE: Error Boundaries do NOT catch errors for:
+                            <li>EventHandlers</li>
+                            <li>Async Code</li>
+                            <li>Server Side rendering</li>
+                            <li>Errors thrown in error boundary itself</li>
+                            <li>--------</li>
+                            <li>use key prop to make ErrorBoundary reset state</li>
+                            <li>using package react-error-boundary + onReset eventHandler + resetKeys array</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>
