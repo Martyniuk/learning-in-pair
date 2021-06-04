@@ -1,0 +1,45 @@
+.game {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.board {
+  margin-right: 10px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #cecece;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  margin: 0;
+  margin-top: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.square {
+  margin-right: 2px;
+}
+
+.restart {
+  margin-top: 20px;
+}
+
+.status {
+  min-width: 200px;
+}
