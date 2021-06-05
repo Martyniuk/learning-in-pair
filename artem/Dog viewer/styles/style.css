@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgreen;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dog-image {
+    display: none;
+    height: 30rem;
+    width: 30rem;
+}
+
+@keyframes spin {       /*@keyframes - CSS at-rule controls the intermediate steps in a CSS animation, difining animation in code*/
+    to { /* end point for animantion, the same as indicate 100%*/
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes psychadelic {
+
+    100% {
+      filter: hue-rotate(360deg);
+    }
+}
+
+.spinner {
+    display: none;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    border-radius: 50%;
+    animation: spin 0.2s ease-in-out infinite;
+}
+
+.show {
+    display: block;
+}
+
+.mole {
+    height: 100px;
+    width: 100px; 
+}
