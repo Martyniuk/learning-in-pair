@@ -133,6 +133,96 @@
             </li>
           </ul>
         </li>
+        <li>Advanced Hooks
+          <ul>
+            <li>useReducer - Redux approach vs React approach</li>
+            <li>useCallback
+              <ul>
+                <li>React.memo cont and pros + React.useCallback, React.useMemo - as a result possibly it is a case to move logic inside of useEffect</li>
+                <li>AHA programming vs DRY, WET</li>
+                <li>Closures</li>
+                <li>Use case: if I call fetch - I receive response, but what if I will move to another page in between "request <- here --> response"? I will receive response anyway and I should not update my state, coz component which state should be updated is already unmounted!!
+                  <ul>solution:
+                    <li>create wrapper over dispatch function that is gonna know when our component is mounted:</li>
+                    <li>How? - create custom hook with boolean variable "mounted" to be false, inside of that function we need to have useEffect(useLayoutEffect) to have logic - ref.current = true (mounted) and return clean up function ref.current = false (unmounted), dependency should be empty array (runs only once)</li>
+                    <li>custom hook should return function that will be called only in case component is mounted -> (...rest) => { if (ref.current) {dispatch(...rest)}}</li>
+                    <li>
+                      full code:
+                      <textarea name="checkIfComponentIsMounted" id="checkIfComponentIsMounted" cols="80" rows="20" disabled>
+                        function useSafeDispatch(dispatch) {
+                          const mountedRef = React.useRef(false)
+
+                          React.useEffect(() => {
+                            mountedRef.current = true
+                            return () => {
+                              mountedRef.current = false
+                            }
+                          }, [])
+
+                          return React.useCallback(
+                            (...rest) => {
+                              if (mountedRef.current) {
+                                dispatch(...rest)
+                              }
+                            },
+                            [dispatch],
+                          )
+                        }
+                      </textarea>
+                    </li>
+                    <li>AbortController API - uh very interesting one</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>useContext
+              <ul>
+                <li>Prop drilling <a href="https://kentcdodds.com/blog/prop-drilling">LINK to Source</a></li>
+                <li>Example of Application Context with useReducer 👉
+                  <textarea name="wrapperOverApp" id="wrapperOverApp" cols="100" rows="25" disabled>
+                    import * as React from 'react'
+                    const CountContext = React.createContext()
+                    function countReducer(state, action) {
+                      switch (action.type) {
+                        case 'increment': {
+                          return {count: state.count + 1}
+                        }
+                        case 'decrement': {
+                          return {count: state.count - 1}
+                        }
+                        default: {
+                          throw new Error(`Unhandled action type: ${action.type}`)
+                        }
+                      }
+                    }
+                    function CountProvider({children}) {
+                      const [state, dispatch] = React.useReducer(countReducer, {count: 0})
+                      // NOTE: you *might* need to memoize this value
+                      // Learn more in http://kcd.im/optimize-context
+                      const value = {state, dispatch}
+                      return <CountContext.Provider value={value}>{children}</CountContext.Provider>
+                    }
+                    export {CountProvider}
+                  </textarea>
+                </li>
+                <li>Dont use default value in createContext function, it can lead to unpredicted UX</li>
+                <li>handling scenario when Context is accessed outside the Context.Provider(and no default value provided) - very practical example of handling it.</li>
+                <li>lesson with mostly practicing everything above about Context</li>
+              </ul>
+            </li>
+            <li>useLayoutEffect
+              <ul>
+                <li>Reflow vs Repaint - <a href="https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg">Article</a></li>
+              </ul>
+            </li>
+            <li>useImperativeHandle - best explanation and use cases <a href="https://stackoverflow.com/questions/57005663/when-to-use-useimperativehandle-uselayouteffect-and-usedebugvalue">HERE</a>
+              <ul>
+                <li>React.forwardRef - Parent component created ref and this ref is passed to children and in order to use this ref - use forwardRef on a children.( why? - coz ref can't be passed to function component, it will be undefined)</li>
+              </ul>
+            </li>
+            <li>useDebugValue - only for custom hooks debugging purpose</li>
+          </ul>
+        </li>
       </ol>
     </section>
   </body>
