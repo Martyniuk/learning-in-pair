@@ -212,10 +212,10 @@
             </li>
             <li>useLayoutEffect
               <ul>
-                <li>Reflow vs Repaint - <a href="https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg">Article</a></li>
+                <li>Reflow vs Repaint - <a href="https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg" target="_blank">Article</a></li>
               </ul>
             </li>
-            <li>useImperativeHandle - best explanation and use cases <a href="https://stackoverflow.com/questions/57005663/when-to-use-useimperativehandle-uselayouteffect-and-usedebugvalue">HERE</a>
+            <li>useImperativeHandle - best explanation and use cases <a href="https://stackoverflow.com/questions/57005663/when-to-use-useimperativehandle-uselayouteffect-and-usedebugvalue" target="_blank">HERE</a>
               <ul>
                 <li>React.forwardRef - Parent component created ref and this ref is passed to children and in order to use this ref - use forwardRef on a children.( why? - coz ref can't be passed to function component, it will be undefined)</li>
               </ul>
@@ -232,6 +232,23 @@
             <li><strong>Prop Collections & Getters</strong> - pretty strange pattern, not sure if I can think of practical example</li>
             <li><strong>State Reducer</strong> - replacing our own reducer with custom reducer that can be passed as prop</li>
             <li><strong>Control Props</strong> - slozna</li>
+          </ul>
+        </li>
+        <li>
+          React Performance
+          <ul>
+            <li>
+              <strong>Code Splitting</strong> - loading less code will speed up your app. "Load on demand"
+              <ul>
+                <li>Dynamic imports - <a href="https://kentcdodds.com/blog/super-simple-start-to-es-modules-in-the-browser" target="_blank">LINK</a></li>
+                <li>diff between 👇 - <a href="https://usefulangle.com/post/256/script-type-module-vs-script-javascript" target="_blank">LINK</a></li><pre><code>script type="module"</code> VS script type="text/javascript"</code></pre>
+                <li>Coverage tool of DevTool of browser. Command+shift+p will give you SearchBar, so enter there Coverage and thats it</li>
+                <li>React.Lazy(() => import('module'))</li>
+                <li>React.Suspense with fallback prop usage</li>
+                <li>Running DynamicImport on Hover or on Focus</li>
+                <li>MagicComments from webpack - <a href="https://webpack.js.org/api/module-methods/#magic-comments">LINK</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ol>
