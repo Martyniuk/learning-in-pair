@@ -1,0 +1,64 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* --- Tabs Styles using target --- */
+
+.tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-container {
+  display: flex;
+  order: -1;
+}
+
+.tab {
+  flex: 1;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tab:active {
+  background-color: #eee;
+}
+
+.tab:hover {
+  background-color: antiquewhite;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  background-color: #eee;
+}
+
+.content:target {
+  display: block;
+}
+
+.content-1:target ~ .tabs-container .tab-1 {
+  background-color: #eee;
+}
+
+.content-2:target ~ .tabs-container .tab-2 {
+  background-color: #eee;
+}
+
+/* === Tabs Styles using target === */
