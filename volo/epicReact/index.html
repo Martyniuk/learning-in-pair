@@ -138,7 +138,7 @@
             <li>useReducer - Redux approach vs React approach</li>
             <li>useCallback
               <ul>
-                <li>React.memo cont and pros + React.useCallback, React.useMemo - as a result possibly it is a case to move logic inside of useEffect</li>
+                <li>React.memo cons and pros + React.useCallback, React.useMemo - as a result possibly it is a case to move logic inside of useEffect</li>
                 <li>AHA programming vs DRY, WET</li>
                 <li>Closures</li>
                 <li>Use case: if I call fetch - I receive response, but what if I will move to another page in between "request <- here --> response"? I will receive response anyway and I should not update my state, coz component which state should be updated is already unmounted!!
@@ -221,6 +221,17 @@
               </ul>
             </li>
             <li>useDebugValue - only for custom hooks debugging purpose</li>
+          </ul>
+        </li>
+        <li>
+          Advanced React Patterns
+          <ul>
+            <li><strong>Context Modular functions</strong> - example of usage</li>
+            <li><strong>Compound Components</strong> - React.Children.map(children, (child) => {}) - more info <a href="https://reactjs.org/docs/react-api.html#reactchildren">here</a></li>
+            <li><strong>Flexible CompoundComponents</strong> - by "flexible" is ment that you will change React.Children.map usage with Context API</li>
+            <li><strong>Prop Collections & Getters</strong> - pretty strange pattern, not sure if I can think of practical example</li>
+            <li><strong>State Reducer</strong> - replacing our own reducer with custom reducer that can be passed as prop</li>
+            <li><strong>Control Props</strong> - slozna</li>
           </ul>
         </li>
       </ol>
