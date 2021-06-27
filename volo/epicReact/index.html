@@ -249,6 +249,103 @@
                 <li>MagicComments from webpack - <a href="https://webpack.js.org/api/module-methods/#magic-comments">LINK</a></li>
               </ul>
             </li>
+            <li>React.useMemo - for expensive calculations
+              <ul>
+                <li>
+                  another option is to use web worker and very easy way to do it - is <strong>workerize</strong> webpack plugin<br>
+                  <textarea name="workerizePluginExample" id="workerizePluginExample" cols="120" rows="13" disabled>
+                    import makeFilterCitiesWorker from 'workerize!./filter-cities'
+
+                    const {getItems} = makeFilterCitiesWorker()
+
+                    export {getItems}
+                    /*
+                      where ./filter-cities - is a module
+                      NOTE: web worker is async operation, so when you will receive getItems - it will be a Promise
+                    */
+                  </textarea>
+                </li>
+                <li>NOTE: useAsync - custom hook for handling async operations<br>
+                  <textarea name="useAsyncCustomHook" id="useAsyncCustomHook" cols="140" rows="70" disabled>
+// Example usage:
+// const {data, error, status, run} = useAsync()
+// React.useEffect(() => {
+//   run(fetchPokemon(pokemonName))
+// }, [pokemonName, run])
+const defaultInitialState = {status: 'idle', data: null, error: null}
+function useAsync(initialState) {
+  const initialStateRef = React.useRef({
+    ...defaultInitialState,
+    ...initialState,
+  })
+  const [{status, data, error}, setState] = React.useReducer(
+    (s, a) => ({...s, ...a}),
+    initialStateRef.current,
+  )
+
+  const safeSetState = useSafeDispatch(setState)
+
+  const run = React.useCallback(
+    promise => {
+      if (!promise || !promise.then) {
+        throw new Error(
+          `The argument passed to useAsync().run must be a promise. Maybe a function that's passed isn't returning anything?`,
+        )
+      }
+      safeSetState({status: 'pending'})
+      return promise.then(
+        data => {
+          safeSetState({data, status: 'resolved'})
+          return data
+        },
+        error => {
+          safeSetState({status: 'rejected', error})
+          return error
+        },
+      )
+    },
+    [safeSetState],
+  )
+
+  const setData = React.useCallback(data => safeSetState({data}), [
+    safeSetState,
+  ])
+  const setError = React.useCallback(error => safeSetState({error}), [
+    safeSetState,
+  ])
+  const reset = React.useCallback(() => safeSetState(initialStateRef.current), [
+    safeSetState,
+  ])
+
+  return {
+    // using the same names that react-query uses for convenience
+    isIdle: status === 'idle',
+    isLoading: status === 'pending',
+    isError: status === 'rejected',
+    isSuccess: status === 'resolved',
+
+    setData,
+    setError,
+    error,
+    status,
+    data,
+    run,
+    reset,
+  }
+}
+                  </textarea>
+                </li>
+              </ul>
+            </li>
+            <li>React.memo - wrapper over Component that potentially might optimize you app
+              <ul>
+                <li>
+                  Be sure you know what and HOW components will be optimized and be sure you need it, coz its overcomplication almost all the time
+                </li>
+                <li>NOTE: very easy to make a mistake and hard to test</li>
+              </ul>
+            </li>
+            <li>Windowing technique - react-virtual - basically review of particular lib that can handle log list of items to render</li>
           </ul>
         </li>
       </ol>
