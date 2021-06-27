@@ -1,0 +1,52 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* --- Tabs styles --- */
+
+.tabs-title {
+  display: flex;
+}
+/* .tabs-title__item + .tabs-title__item {
+  border-right: none;
+} */
+
+.tabs-title__item {
+  padding: 20px 0;
+  flex: 1;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.tabs-title__item:first-child {
+  border-right: none;
+}
+
+.tabs-title__item:hover {
+  background-color: antiquewhite;
+}
+
+.tabs-title__item.active {
+  background-color: #eee;
+}
+
+.tabs-content__item {
+  display: none;
+  background-color: #eee;
+  text-align: center;
+  padding: 40px;
+}
+
+.tabs-content__item.active {
+  display: block;
+}
+
+/* === Tabs styles === */

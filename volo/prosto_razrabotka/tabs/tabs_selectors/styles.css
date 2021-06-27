@@ -1,0 +1,58 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.tabs-wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 20px;
+  flex-basis: 50%;
+}
+
+.label:hover {
+  background-color: #eee;
+}
+
+.content {
+  display: none;
+  flex-basis: 100%;
+  min-height: 100px;
+}
+
+#tab-1:checked ~ label[for="tab-1"],
+#tab-2:checked ~ label[for="tab-2"] {
+  background-color: #c2c2c2;
+}
+
+#tab-1:checked ~ .content-1,
+#tab-2:checked ~ .content-2 {
+  display: block;
+  background-color: #c2c2c2;
+}
