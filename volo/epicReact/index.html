@@ -346,6 +346,48 @@ function useAsync(initialState) {
               </ul>
             </li>
             <li>Windowing technique - react-virtual - basically review of particular lib that can handle log list of items to render</li>
+            <li>React.useMemo optimization:
+              <ul>
+                <li>for memoisation of props and context that are passed to children</li>
+                <li>children components should be React.memo</li>
+                <li>in case part of context is changing - just separate it into few</li>
+                <h3>Disadvantages of "React.memo"</h3>
+                <ol>
+                  <li>It increases the complexity of our app (because we have to start using useCallback and useMemo for literally everything to take advantage of that, meaning you have a bunch of dependency arrays to manage).</li>
+                  <li>React’s still doing a bunch of work to check whether these components should be re-rendered.</li>
+                </ol>
+              </ul>
+            </li>
+            <li>"perf death by a thousand cuts" (which basically means that so many components are updated when state changes that it becomes a performance bottleneck)
+              <ul>Possible solutions
+                <li>Collocation put less state to our global store ------ > <a href="https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster">LINK to Article to read about</a></li>
+                <li>Collocation put state -> "as close to where it's relevant as possible"</li>
+                <li>Context separation technique is also fine, use it if needed</li>
+              </ul>
+            </li>
+            <li>Recoil - state management system <a href="https://recoiljs.org/docs/introduction/installation">Documentation</a>
+              <ol> Motivation
+                <li>close to native React state management system </li>
+                <li>boilerplate free and simple</li>
+                <li>! - ! - ! - direct dependency of component from particular state - reduces re-rendering</li>
+              </ol>
+              <ul>
+                Core Concepts
+                <li>Atom - unit of state. updateable and subscribable: when an atom is updated, each subscribed component is re-rendered with the new value</li>
+                <li>useRecoilState - hook to read & write recoil state - subscribing Component for value change</li>
+                <li>useSetRecoilState - hook to write recoil state - NO subscription of Component fro value change</li>
+                <li>Selector - do calculations based on recoil state(atoms, selectors)</li>
+                <li>useRecoilValue - takes an atom or selector as an argument and returns the corresponding value. We don't use the useRecoilState() as the fontSizeLabelState selector is not writeable</li>
+                <li>There are bunch of others but it will not be covered here</li>
+              </ul>
+
+            </li>
+            <li>Production performance monitoring
+              <ul>Profiling feature - <a href="https://reactjs.org/docs/profiler.html">Docs</a>
+                <li>provides info about Component rendering time - how to use profiling in details doc - <a href="https://gist.github.com/bvaughn/25e6233aeb1b4f0cdb8d8366e54a3977">LINK</a></li>
+                <li>provider info about What interaction caused component Re-render - interaction tracing info - <a href="https://gist.github.com/bvaughn/8de925562903afd2e7a12554adcdda16">LINK</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ol>
