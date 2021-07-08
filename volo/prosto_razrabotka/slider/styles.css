@@ -1,0 +1,76 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* slider */
+
+.slider-container {
+  overflow: hidden;
+  background-color: pink;
+  /* border: 1px solid red; */
+}
+.slider-line {
+  display: flex;
+  background-color: yellow;
+  transition: 0.2s;
+  border: 1px solid red;
+  position: relative;
+}
+.slider-item {
+  height: 100px;
+  min-width: 200px;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+}
+
+.slider-item:nth-child(3n + 1) {
+  background-color: red;
+}
+.slider-item:nth-child(3n + 2) {
+  background-color: green;
+}
+.slider-item:nth-child(3n + 3) {
+  background-color: blue;
+}
+
+.slider-buttons {
+  text-align: center;
+}
+
+.first {
+  background: url("images/self_discipline_1.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.second {
+  background: url("images/self_discipline_2.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.third {
+  background: url("images/self_discipline_3.jpeg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.fourth {
+  background: url("images/self_discipline_4.jpeg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.fifth {
+  background: url("images/self_discipline_5.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.sixth {
+  background: url("images/self_discipline_6.jpeg") 50% 50% no-repeat;
+  background-size: cover;
+}
