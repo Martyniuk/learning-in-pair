@@ -1,6 +1,6 @@
 module.exports = {
   extends: ["@commitlint/config-conventional"],
   rules: {
-    "scope-enum": [2, "always", ["artem", "volo", "project"]],
+    "scope-enum": [2, "always", ["artem", "volo", "artemvmv", "project"]],
   },
 };
