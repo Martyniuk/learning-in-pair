@@ -16,38 +16,37 @@ body {
     /* background-color: red; */
    
     display: flex;
-    margin: 60px 150px;
+    margin: 60px 250px 60px 150px;
     width: 100%;
+    /* height: 550px; */
    
 }
 
 .container-left {
+  
     background-image: url("images/bg-pattern-desktop.svg");
-
     background-size: cover;
-
-   
-    
-    padding: 30px 50px 30px 50px;
+    padding: 30px 130px;
     
 }
 
 .container-right {
-    flex-basis: 40%;
-    max-height: 100%;
-    
-
+ 
+    /* max-height: 100%; */
+    /* object-fit: cover;
+     */
 }
 .container-right img {
-   max-width: 100%;
-   max-height: 100%;    
+  /* height: 100%; */
+     
     
 }
 .input-field {
+    border: 1px solid hsl(0, 36%, 70%);
     display: flex;
-    outline: 1px solid green;
+ 
     border-radius: 15px;
-    width: 200px;
+    width: 100%;
     height: 30px;
 
     justify-content: space-between;
@@ -58,6 +57,7 @@ body {
 
 #email {
     display: flex;
+    outline: 0;
     border: none;
     height: 15px;
     justify-content: center;
@@ -67,21 +67,61 @@ body {
 
     margin-left: 10px;
 }
-.input-field button {
+.log-in {
     display: flex;
     border: none;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
 
-    position:relative;
-    left:2px;
+    position:absolute;
+    right:0px;
 
     width: 50px;
-    height: 32px;
+    height: 30px;
 
-    box-shadow: 0px 5px 8px grey;
+   
 
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    
+}
+.log-in:hover {
+    background: linear-gradient(135deg, hsl(0, 95%, 86%), hsl(0, 89%, 74%));
+    cursor: pointer;
+    box-shadow: 0px 5px 8px grey;
+}
+
+
+.subscription-form {
+    display: flex;
+   position: relative;
+   margin-bottom: 20px;
+}
+
+.row-one {
+    color: hsl(0, 36%, 70%);
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-top: 110px;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+.rom-two {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+}
+
+.chapter {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+.topic {
+    margin-top: 60px;
 }
