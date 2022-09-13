@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    padding-top: 30px;
+}
+
+.container {
+   width: 550px;
+   /* height: 550px;  to remove */
+
+   margin: 0 auto;
+   padding: 30px 52px;
+
+   background-color: #1F2937; 
+
+   border-radius: 10px;
+}
+
+.input-section {
+    margin: 30px 0px;
+}
+
+.text-content {
+    font-family: 'Karla', sans-serif;
+    list-style-type: none;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+    
+}
+
+.input-section-line-one {
+    color: #FFFFFF;
+}
+
+.input-section-line-two {
+    color: #4ADF86;
+}
+
+.input-section-line-three {
+    color: #D5D4D8;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.generate-btn {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    width: 191px;
+    height: 42px;
+    
+    color: #FFFFFF;
+  
+    margin-top: 40px;
+
+}
+
+.generate-btn-style {
+    background: #10B981;
+    border-radius: 6px;
+    padding: 5px;
+    width: inherit;
+    height: inherit;
+
+    border: none;
+}
+
+.output-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    flex-direction: column;
+    
+
+}
+
+.output-section::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #2F3E53;
+    width: 100%;
+    top: -30px;
+}
+
+.generated-password {
+    font-family: 'Inter', sans-serif;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 24px
+    
+}
+
+.password-filed {
+    border: none;
+    border-radius: 5px;
+
+    margin: 0px;
+    background-color: #273549;
+    color: #55F991;
+
+    list-style-type: none;
+    display: inline-block;
+    width: 211px;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-filed p {
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    display: flex;
+   
+}
+
+.length-input {
+    font-family: 'Inter', sans-serif;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.length-input-label {
+    color: #D5D4D8;
+}
+
+.length-input-style {
+    background-color: #D5D4D8;
+    color: black;
+}
+
+.message {
+    position: absolute;
+    color: red;
+}
+
+.checkbox-style {
+    font-family: 'Inter', sans-serif;
+    padding: 10px 0px;
+}
+
+.checkbox {
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+    color: #D5D4D8;
+}
+
+.checkbox-name {
+    padding-right: 10px;
+}

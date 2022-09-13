@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="styless.css">
+    <title>Password Generator</title>
+  
+</head>
+<body>
+    <header></header>
+    <main class="container">
+
+        <section class="input-section">
+            <ul class="text-content">
+                <li><p class="input-section-line-one">Generate a</p></li>
+                <li><p class="input-section-line-two">random password</p></li>
+                <li><p class="input-section-line-three">Never use insecure password again</p></li>
+            </ul>
+            <div class="generate-btn">
+                <button class="generate-btn-style"type="button">Generate password</button>
+            </div>
+        </section>
+
+        <section class="output-section">
+            <ul class="generated-password">
+                <li class="password-filed"><p id="first-password"></p></li>
+                <li class="password-filed"><p id="second-password"></p></li>
+            </ul>
+
+            <div class="length-input">
+                <label class="length-input-label" for="password-length">Chose needed length of password</label>
+                <input 
+                    class="length-input-style" 
+                    type="number" 
+                    id="password-length" 
+                    name="password-length" 
+                    min="4"
+                    max="15">
+                <p class="message" id="error-message"></p>
+            </div>
+            <ul class="checkbox-style">
+                <li class="checkbox">
+                    <label class="checkbox-name" for="addNumbers">Add Numbers</label>
+                    <input  type="checkbox" id="addNumbers"></input>
+                </li>
+                <li class="checkbox">
+                    <label class="checkbox-name" for="addSigns">Add Numbers</label>
+                    <input type="checkbox" id="addSigns"></input>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>
