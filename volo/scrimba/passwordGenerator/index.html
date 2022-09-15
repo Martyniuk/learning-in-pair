@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="main" class="main">
+        <div class="generate">
+            <p class="generate__title">Generate a <br> <span>random password</span></p>
+            <p class="generate__description">Never use an insecure password again</p>
+            <button id="generate-cta" class="generate-cta">Generate password</button>
+            <hr class="divider">
+            <div class="settings accordion">
+                <button class="settings__btn">Additional settings</button>
+                <div class="settings__panel">
+                    <div class="settings__item">
+                        <!-- запарился имена для классов придумывать -->
+                        <label for="passwordLength">Length of password 👉 </label>
+                        <input id="passwordLength" name="passwordLength" type="number" placeholder='🖕' min="7" max="15">
+                    </div>
+                    <div class="settings__item">
+                        <p>Include Symbols? 👉 </p>
+                        <label for="settings__toggle-symbols" class="switch">
+                            <input id="settings__toggle-symbols" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="settings__item">
+                        <p>Include Numbers? 👉 </p>
+                        <label for="settings__toggle-numbers" class="switch">
+                            <input id="settings__toggle-numbers" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="output-wrapper">
+                <div class="output-option-wrapper">
+                    <p id="option-one" class="generate__input"></p>    
+                    <button id="option-one-copy" class="option-copy"></button>
+                </div>
+                <div class="output-option-wrapper">
+                    <p id="option-two" class="generate__input"></p>
+                    <button id="option-two-copy" class="option-copy"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
