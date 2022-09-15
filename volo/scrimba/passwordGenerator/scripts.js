@@ -116,12 +116,11 @@ function generatePass() {
 
   if (includeSymbols) {
     characters.push(...charactersObj.symbols);
+  } else {
+    characters = characters.filter(
+      (char) => !charactersObj.symbols.includes(char)
+    );
   }
-  // } else {
-  //   characters = characters.filter(
-  //     (char) => !charactersObj.symbols.includes(char)
-  //   );
-  // }
   if (includeNumbers) {
     characters.push(...charactersObj.numbers);
   } else {
