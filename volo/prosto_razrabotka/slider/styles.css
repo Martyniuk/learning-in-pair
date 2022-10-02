@@ -18,20 +18,20 @@
 }
 .slider-line {
   display: flex;
-  background-color: yellow;
+  /* background-color: yellow;s */
   transition: 0.2s;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: relative;
 }
 .slider-item {
   height: 100px;
-  min-width: 200px;
+  /* min-width: 200px; */
   /* position: absolute; */
   /* top: 0; */
   /* left: 0; */
 }
 
-.slider-item:nth-child(3n + 1) {
+/* .slider-item:nth-child(3n + 1) {
   background-color: red;
 }
 .slider-item:nth-child(3n + 2) {
@@ -39,7 +39,7 @@
 }
 .slider-item:nth-child(3n + 3) {
   background-color: blue;
-}
+} */
 
 .slider-buttons {
   text-align: center;
