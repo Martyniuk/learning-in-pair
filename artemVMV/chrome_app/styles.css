@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 400px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.buttons {
+    padding-top: 15px;
+}
+
+input {
+    display: block;
+    width: 100%;
+}
+
+li {
+    width: 100%
+
+}
+span {
+    padding-left: 50px;
+}
