@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal repeat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Modal to be opened</h2>
+        <p>Main idea of Modal is to have:</p>
+        <ul>
+            <li>An overlay div that is positioned as absolute but at the same time is displayed as none</li>
+            <li>An overlay has to have top, right, bottom, left to be 0 and backgroundColor to be set with alpha canal(opacity)</li>
+            <li>Inside of that Overlay div, you have to create div with modal that is relative, positioned in center</li>
+            <li>2 btns should be created - open & close modal that will updating display css property of overlay</li>
+        </ul>
+        <button class="open-modal">Open modal</button>
+    </div>
+    <div class="overlay">
+        <div id="modal" class="modal">
+            <h3>This is modal</h3>
+            <p>Onclick display will be changed</p>
+            <button class="close-modal">Close modal</button>
+        </div>
+    </div>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
